@@ -8,7 +8,17 @@
 </head>
 <body>
 	<div class="flex">
- 		<div><h1>John Mehl's Groovy Website</h1><h2>Coming soon to a browser near you!</h2></div>
+ 		<div><h1>John Mehl's <span id="groovy"></span> Website</h1><h2>Coming soon to a browser near you!</h2></div>
 	</div>
+	<script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+	<script>
+		var myGrooves = ['Groovy', 'Superfantastic', 'Fabulous', 'Far-out', 'So Overt It\'s Covert', 'Phantasmagorical', 'Outta Sight', 'Magnificent', '#Blessed', 'Topnotch'];
+		$(document).ready(function() {
+			$('#groovy').html(myGrooves[Math.floor(Math.random()*myGrooves.length)]);
+		});
+	</script>
 </body>
 </html>
